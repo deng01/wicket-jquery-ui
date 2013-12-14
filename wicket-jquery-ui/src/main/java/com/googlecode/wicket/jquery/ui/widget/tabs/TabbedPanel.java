@@ -16,6 +16,7 @@
  */
 package com.googlecode.wicket.jquery.ui.widget.tabs;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -93,6 +94,26 @@ public class TabbedPanel extends JQueryPanel implements ITabsListener
 	}
 
 	/**
+	 * Gets the list of visible {@link ITab}<tt>s</tt>
+	 *
+	 * @return the list of visible tabs
+	 */
+	public List<ITab> getVisibleTabs()
+	{
+		List<ITab> list = new ArrayList<ITab>();
+
+		for (ITab tab : this.getModelObject())
+		{
+			if (tab.isVisible())
+			{
+				list.add(tab);
+			}
+		}
+
+		return list;
+	}
+
+	/**
 	 * Activates the selected tab
 	 *
 	 * @param index the tab's index to activate
@@ -129,10 +150,11 @@ public class TabbedPanel extends JQueryPanel implements ITabsListener
 	 *
 	 * @param tab the {@link ITab} to be added
 	 * @return true (as specified by Collection.add)
+	 * @throws UnsupportedOperationException if null is supplied to the constructor
 	 */
 	public boolean add(ITab tab)
 	{
-		return this.getModelObject().add(tab); // will throw an UnsupportedOperationException if null is supplied to the constructor
+		return this.getModelObject().add(tab);
 	}
 
 	// Events //

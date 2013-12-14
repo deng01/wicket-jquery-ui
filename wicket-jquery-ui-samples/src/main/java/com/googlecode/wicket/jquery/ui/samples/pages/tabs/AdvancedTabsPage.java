@@ -72,7 +72,7 @@ public class AdvancedTabsPage extends AbstractTabsPage
 
 
 	// Factories //
-	private TabDialog newTabDialog(String id)
+	private final TabDialog newTabDialog(String id)
 	{
 		return new TabDialog(id, "Add Tab") {
 
@@ -105,15 +105,18 @@ public class AdvancedTabsPage extends AbstractTabsPage
 
 			private static final long serialVersionUID = 1L;
 
+			private int max()
+			{
+				return tabPanel.getVisibleTabs().size() - 1;
+			}
+
 			@Override
 			protected void onConfigure()
 			{
 				super.onConfigure();
 
-				int max = tabPanel.getModelObject().size() - 1;
-
 				this.getBackwardButton().setEnabled(tabIndex > 0);
-				this.getForwardButton().setEnabled(tabIndex < max);
+				this.getForwardButton().setEnabled(tabIndex < max());
 			}
 
 			@Override
@@ -128,9 +131,7 @@ public class AdvancedTabsPage extends AbstractTabsPage
 			@Override
 			protected void onForward(AjaxRequestTarget target, AjaxButton button)
 			{
-				int max = tabPanel.getModelObject().size() - 1;
-
-				if (tabIndex < max)
+				if (tabIndex < max())
 				{
 					tabPanel.setActiveTab(tabIndex + 1, target);
 				}
