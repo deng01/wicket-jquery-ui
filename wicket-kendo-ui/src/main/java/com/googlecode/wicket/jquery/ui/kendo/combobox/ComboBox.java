@@ -52,6 +52,7 @@ public class ComboBox<T> extends TextField<String> implements IJQueryWidget
 
 	/**
 	 * Constructor
+	 *
 	 * @param id the markup id
 	 * @param choices the list of choices
 	 */
@@ -62,6 +63,7 @@ public class ComboBox<T> extends TextField<String> implements IJQueryWidget
 
 	/**
 	 * Constructor
+	 *
 	 * @param id the markup id
 	 * @param choices the list of choices
 	 * @param renderer the renderer to be used, so the renderer item text and its values can be dissociated
@@ -73,6 +75,7 @@ public class ComboBox<T> extends TextField<String> implements IJQueryWidget
 
 	/**
 	 * Constructor
+	 *
 	 * @param id the markup id
 	 * @param choices the list model of choices
 	 */
@@ -83,6 +86,7 @@ public class ComboBox<T> extends TextField<String> implements IJQueryWidget
 
 	/**
 	 * Constructor
+	 *
 	 * @param id the markup id
 	 * @param choices the list model of choices
 	 * @param renderer the renderer to be used, so the renderer item text and its values can be dissociated
@@ -98,6 +102,7 @@ public class ComboBox<T> extends TextField<String> implements IJQueryWidget
 
 	/**
 	 * Constructor
+	 *
 	 * @param id the markup id
 	 * @param model the {@link IModel}
 	 * @param choices the list of choices
@@ -109,6 +114,7 @@ public class ComboBox<T> extends TextField<String> implements IJQueryWidget
 
 	/**
 	 * Constructor
+	 *
 	 * @param id the markup id
 	 * @param model the {@link IModel}
 	 * @param choices the list model of choices
@@ -121,6 +127,7 @@ public class ComboBox<T> extends TextField<String> implements IJQueryWidget
 
 	/**
 	 * Constructor
+	 *
 	 * @param id the markup id
 	 * @param model the {@link IModel}
 	 * @param choices the list model of choices
@@ -132,6 +139,7 @@ public class ComboBox<T> extends TextField<String> implements IJQueryWidget
 
 	/**
 	 * Constructor
+	 *
 	 * @param id the markup id
 	 * @param model the {@link IModel}
 	 * @param choices the list model of choices
@@ -146,10 +154,10 @@ public class ComboBox<T> extends TextField<String> implements IJQueryWidget
 		this.template = this.newTemplate();
 	}
 
-
 	// Properties //
 	/**
 	 * Gets the (inner) list width.
+	 *
 	 * @return the list width
 	 */
 	public int getListWidth()
@@ -159,6 +167,7 @@ public class ComboBox<T> extends TextField<String> implements IJQueryWidget
 
 	/**
 	 * Sets the (inner) list width.
+	 *
 	 * @param width the list width
 	 * @return this, for chaining
 	 */
@@ -168,7 +177,6 @@ public class ComboBox<T> extends TextField<String> implements IJQueryWidget
 
 		return this;
 	}
-
 
 	// Events //
 	@Override
@@ -203,7 +211,7 @@ public class ComboBox<T> extends TextField<String> implements IJQueryWidget
 
 		if (list != null)
 		{
-			for (int index = 0 ; index < list.size(); index++)
+			for (int index = 0; index < list.size(); index++)
 			{
 				T object = list.get(index);
 
@@ -258,6 +266,7 @@ public class ComboBox<T> extends TextField<String> implements IJQueryWidget
 	/**
 	 * Gets a new {@link IJQueryTemplate} to customize the rendering<br/>
 	 * The properties used in the template text (ie: ${data.name}) should be of the prefixed by "data." and should be identified in the list returned by {@link IJQueryTemplate#getTextProperties()} (without "data.")
+	 *
 	 * @return null by default
 	 */
 	protected IJQueryTemplate newTemplate()
