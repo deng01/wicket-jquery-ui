@@ -17,7 +17,7 @@
 package com.googlecode.wicket.jquery.ui.plugins.fixedheadertable;
 
 import org.apache.wicket.Application;
-import org.apache.wicket.settings.IJavaScriptLibrarySettings;
+import org.apache.wicket.settings.JavaScriptLibrarySettings;
 
 import com.googlecode.wicket.jquery.core.JQueryBehavior;
 import com.googlecode.wicket.jquery.core.Options;
@@ -32,7 +32,7 @@ public class FixedHeaderTableBehavior extends JQueryBehavior
 	/**
 	 * Gets the {@link IFixedHeaderTableLibrarySettings}
 	 *
-	 * @return Default internal {@link IFixedHeaderTableLibrarySettings} if {@link Application}'s {@link IJavaScriptLibrarySettings} is not an instance of {@link IFixedHeaderTableLibrarySettings}
+	 * @return Default internal {@link IFixedHeaderTableLibrarySettings} if {@link Application}'s {@link JavaScriptLibrarySettings} is not an instance of {@link IFixedHeaderTableLibrarySettings}
 	 */
 	private static IFixedHeaderTableLibrarySettings getLibrarySettings()
 	{

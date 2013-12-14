@@ -17,7 +17,7 @@
 package com.googlecode.wicket.jquery.ui.plugins.emoticons;
 
 import org.apache.wicket.Application;
-import org.apache.wicket.settings.IJavaScriptLibrarySettings;
+import org.apache.wicket.settings.JavaScriptLibrarySettings;
 
 import com.googlecode.wicket.jquery.core.JQueryBehavior;
 import com.googlecode.wicket.jquery.core.Options;
@@ -37,7 +37,7 @@ public class EmoticonsBehavior extends JQueryBehavior
 	/**
 	 * Gets the {@link IEmoticonsLibrarySettings}
 	 *
-	 * @return Default internal {@link IEmoticonsLibrarySettings} if {@link Application}'s {@link IJavaScriptLibrarySettings} is not an instance of {@link IEmoticonsLibrarySettings}
+	 * @return Default internal {@link IEmoticonsLibrarySettings} if {@link Application}'s {@link JavaScriptLibrarySettings} is not an instance of {@link IEmoticonsLibrarySettings}
 	 */
 	private static IEmoticonsLibrarySettings getLibrarySettings()
 	{

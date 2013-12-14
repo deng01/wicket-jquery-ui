@@ -28,7 +28,7 @@ import org.apache.wicket.markup.head.JavaScriptHeaderItem;
 import org.apache.wicket.request.IRequestHandler;
 import org.apache.wicket.request.cycle.RequestCycle;
 import org.apache.wicket.request.handler.resource.ResourceReferenceRequestHandler;
-import org.apache.wicket.settings.IJavaScriptLibrarySettings;
+import org.apache.wicket.settings.JavaScriptLibrarySettings;
 import org.apache.wicket.util.time.Duration;
 
 import com.googlecode.wicket.jquery.core.JQueryBehavior;
@@ -54,7 +54,7 @@ public abstract class CalendarBehavior extends JQueryBehavior implements IJQuery
 	/**
 	 * Gets the {@link ICalendarLibrarySettings}
 	 *
-	 * @return Default internal {@link ICalendarLibrarySettings} instance if {@link Application}'s {@link IJavaScriptLibrarySettings} is not an instance of {@link ICalendarLibrarySettings}
+	 * @return Default internal {@link ICalendarLibrarySettings} instance if {@link Application}'s {@link JavaScriptLibrarySettings} is not an instance of {@link ICalendarLibrarySettings}
 	 */
 	private static ICalendarLibrarySettings getLibrarySettings()
 	{
