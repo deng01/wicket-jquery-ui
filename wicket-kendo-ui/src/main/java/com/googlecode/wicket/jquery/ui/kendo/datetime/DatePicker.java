@@ -36,6 +36,7 @@ import com.googlecode.wicket.jquery.ui.kendo.utils.KendoDateTimeUtils;
  *
  * @author Sebastien Briquet - sebfz1
  */
+//XXX: report break: input type=date (instead of type=text)
 public class DatePicker extends DateTextField implements IJQueryWidget
 {
 	private static final long serialVersionUID = 1L;

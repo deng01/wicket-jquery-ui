@@ -32,16 +32,19 @@ import com.googlecode.wicket.jquery.ui.kendo.utils.KendoDateTimeUtils;
 
 /**
  * Provides a Kendo UI time-picker<br/>
- * It should be created on a HTML &lt;input type="text" /&gt; element
+ * It should be created on a HTML &lt;input type="time" /&gt; element
  *
  * @author Sebastien Briquet - sebfz1
  */
+//XXX: report break: input type=time (instead of type=text)
 public class TimePicker extends DateTextField implements IJQueryWidget
 {
 	private static final long serialVersionUID = 1L;
 
 	protected static final String METHOD = "kendoTimePicker";
-	protected static final String DEFAULT_PATTERN = "h:mm aa"; // default java time pattern
+
+	/** default java time pattern */
+	protected static final String DEFAULT_PATTERN = "h:mm aa";
 
 	Options options;
 

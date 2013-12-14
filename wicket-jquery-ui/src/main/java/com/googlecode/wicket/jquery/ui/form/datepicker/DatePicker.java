@@ -32,6 +32,7 @@ import com.googlecode.wicket.jquery.core.ajax.JQueryAjaxPostBehavior;
  *
  * @author Sebastien Briquet - sebfz1
  */
+//XXX: report break: input type=date (instead of type=text)
 public class DatePicker extends DateTextField implements IJQueryWidget, IDatePickerListener
 {
 	private static final long serialVersionUID = 1L;
