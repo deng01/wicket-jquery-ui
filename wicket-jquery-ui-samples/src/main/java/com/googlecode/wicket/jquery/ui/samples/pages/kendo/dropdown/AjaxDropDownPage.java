@@ -20,7 +20,7 @@ public class AjaxDropDownPage extends AbstractDropDownPage
 
 	public AjaxDropDownPage()
 	{
-		Form<Void> form = new Form<Void>("form");
+		Form<Void> form = new Form<>("form");
 		this.add(form);
 
 		// FeedbackPanel //
@@ -28,7 +28,7 @@ public class AjaxDropDownPage extends AbstractDropDownPage
 		form.add(feedback.setOutputMarkupId(true));
 
 		// ComboBox //
-		final DropDownList<String> dropdown = new AjaxDropDownList<String>("select", new Model<String>(), new ListModel<String>(GENRES)) {
+		final DropDownList<String> dropdown = new AjaxDropDownList<String>("select", Model.of(""), new ListModel<String>(GENRES)) {
 
 			private static final long serialVersionUID = 1L;
 

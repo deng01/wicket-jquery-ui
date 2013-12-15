@@ -1,6 +1,7 @@
 package com.googlecode.wicket.jquery.ui.samples.pages.kendo.datetimepicker;
 
 import java.util.Calendar;
+
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.panel.FeedbackPanel;
@@ -17,7 +18,7 @@ public class PatternTimePickerPage extends AbstractTimePickerPage
 
 	public PatternTimePickerPage()
 	{
-		Form<Void> form = new Form<Void>("form");
+		Form<Void> form = new Form<>("form");
 		this.add(form);
 
 		// FeedbackPanel //

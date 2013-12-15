@@ -100,7 +100,7 @@ public class TabbedPanel extends JQueryPanel implements ITabsListener
 	 */
 	public List<ITab> getVisibleTabs()
 	{
-		List<ITab> list = new ArrayList<ITab>();
+		List<ITab> list = new ArrayList<>();
 
 		for (ITab tab : this.getModelObject())
 		{

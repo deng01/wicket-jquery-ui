@@ -17,7 +17,7 @@ public class AjaxTimePickerPage extends AbstractTimePickerPage
 
 	public AjaxTimePickerPage()
 	{
-		Form<Void> form = new Form<Void>("form");
+		Form<Void> form = new Form<>("form");
 		this.add(form);
 
 		// FeedbackPanel //
@@ -29,7 +29,7 @@ public class AjaxTimePickerPage extends AbstractTimePickerPage
 		calendar.set(0, 0, 0, 14, 0); //2:00 PM
 
 		final TimePicker timepicker = new AjaxTimePicker("timepicker", Model.of(calendar.getTime())) {
-			
+
 			private static final long serialVersionUID = 1L;
 
 			@Override
@@ -40,7 +40,7 @@ public class AjaxTimePickerPage extends AbstractTimePickerPage
 				target.add(feedback);
 			}
 		};
-		
+
 		form.add(timepicker);
 	}
 }

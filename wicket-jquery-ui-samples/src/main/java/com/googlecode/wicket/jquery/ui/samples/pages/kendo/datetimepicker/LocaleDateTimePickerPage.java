@@ -27,7 +27,7 @@ public class LocaleDateTimePickerPage extends AbstractTimePickerPage
 
 	public LocaleDateTimePickerPage()
 	{
-		Form<Void> form = new Form<Void>("form");
+		Form<Void> form = new Form<>("form");
 		this.add(form);
 
 		// FeedbackPanel //

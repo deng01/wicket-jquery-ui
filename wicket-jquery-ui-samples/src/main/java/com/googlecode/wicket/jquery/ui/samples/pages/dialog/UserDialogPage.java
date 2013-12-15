@@ -31,7 +31,7 @@ public class UserDialogPage extends AbstractDialogPage
 
 	public UserDialogPage()
 	{
-		this.users = new ArrayList<User>();
+		this.users = new ArrayList<>();
 
 		this.init();
 	}
@@ -134,7 +134,7 @@ public class UserDialogPage extends AbstractDialogPage
 		{
 			super(id, title, true);
 
-			this.form = new Form<Integer>("form");
+			this.form = new Form<>("form");
 			this.add(this.form);
 
 			// Slider //

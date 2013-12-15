@@ -11,15 +11,15 @@ import com.googlecode.wicket.jquery.ui.panel.JQueryFeedbackPanel;
 public class AjaxButtonPage extends AbstractButtonPage
 {
 	private static final long serialVersionUID = 1L;
-	
+
 	public AjaxButtonPage()
 	{
 		this.init();
 	}
-	
+
 	private void init()
 	{
-		final Form<Void> form = new Form<Void>("form");
+		final Form<Void> form = new Form<>("form");
 		this.add(form);
 
 		// FeedbackPanel //
@@ -36,7 +36,7 @@ public class AjaxButtonPage extends AbstractButtonPage
 			{
 				AjaxButtonPage.this.info(this);
 				target.add(feedback);
-			}			
+			}
 		});
 
 		form.add(new AjaxButton("button2") {
@@ -48,10 +48,10 @@ public class AjaxButtonPage extends AbstractButtonPage
 			{
 				AjaxButtonPage.this.info(this);
 				target.add(form);
-			}			
+			}
 		});
 	}
-	
+
 	private void info(Component component)
 	{
 		this.info(component.getMarkupId() + " has been clicked");

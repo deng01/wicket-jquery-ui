@@ -20,7 +20,7 @@ public class DefaultComboBoxPage extends AbstractComboBoxPage
 
 	public DefaultComboBoxPage()
 	{
-		Form<Void> form = new Form<Void>("form");
+		Form<Void> form = new Form<>("form");
 		this.add(form);
 
 		// FeedbackPanel //

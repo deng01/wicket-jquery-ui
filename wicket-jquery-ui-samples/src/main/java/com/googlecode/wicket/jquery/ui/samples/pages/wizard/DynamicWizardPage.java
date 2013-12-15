@@ -39,7 +39,7 @@ public class DynamicWizardPage extends AbstractWizardPage
 	public DynamicWizardPage()
 	{
 		// Form //
-		Form<Void> form = new Form<Void>("form");
+		Form<Void> form = new Form<>("form");
 		this.add(form);
 
 		// FeedbackPanel //

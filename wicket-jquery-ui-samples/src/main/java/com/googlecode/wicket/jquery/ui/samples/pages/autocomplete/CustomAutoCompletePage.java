@@ -31,7 +31,7 @@ public class CustomAutoCompletePage extends AbstractAutoCompletePage
 		final IModel<Genre> model = new Model<Genre>(GenresDAO.newGenre());
 
 		// Form //
-		final Form<Void> form = new Form<Void>("form");
+		final Form<Void> form = new Form<>("form");
 		this.add(form);
 
 		// Container for selected genre (name & cover) //

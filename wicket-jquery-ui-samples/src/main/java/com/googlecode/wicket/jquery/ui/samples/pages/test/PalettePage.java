@@ -22,7 +22,7 @@ public class PalettePage extends TemplatePage
 
 	private void init()
 	{
-		final Form<Void> form = new Form<Void>("form");
+		final Form<Void> form = new Form<>("form");
 		this.add(form);
 
 		// Palette //

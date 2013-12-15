@@ -53,7 +53,7 @@ public class DemoCalendarDAO
 
 	public static List<DemoCalendarEvent> getEvents(Date start, Date end)
 	{
-		List<DemoCalendarEvent> events = new ArrayList<DemoCalendarEvent>();
+		List<DemoCalendarEvent> events = new ArrayList<>();
 
 		DemoCalendarDAO dao = get();
 
@@ -86,7 +86,7 @@ public class DemoCalendarDAO
 
 	public DemoCalendarDAO()
 	{
-		this.list = new ArrayList<DemoCalendarEvent>();
+		this.list = new ArrayList<>();
 		this.initList();
 	}
 
@@ -96,7 +96,7 @@ public class DemoCalendarDAO
 		this.list.add(new DemoCalendarEvent(this.newId(), "Private event", Category.PRIVATE, new Date()));
 	}
 
-	protected int newId()
+	protected final int newId()
 	{
 		return ++this.id;
 	}

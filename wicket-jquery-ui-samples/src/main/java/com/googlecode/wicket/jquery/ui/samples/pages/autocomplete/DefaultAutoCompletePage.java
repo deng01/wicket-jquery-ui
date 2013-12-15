@@ -32,7 +32,7 @@ public class DefaultAutoCompletePage extends AbstractAutoCompletePage
 	private void init()
 	{
 		// Form //
-		final Form<Void> form = new Form<Void>("form");
+		final Form<Void> form = new Form<>("form");
 		this.add(form);
 
 		// FeedbackPanel //
@@ -47,7 +47,7 @@ public class DefaultAutoCompletePage extends AbstractAutoCompletePage
 			@Override
 			protected List<String> getChoices(String input)
 			{
-				List<String> choices = new ArrayList<String>();
+				List<String> choices = new ArrayList<>();
 
 				int count = 0;
 				for (String choice : CHOICES)

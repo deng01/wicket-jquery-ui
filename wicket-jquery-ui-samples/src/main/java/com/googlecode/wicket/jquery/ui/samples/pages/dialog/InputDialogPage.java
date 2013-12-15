@@ -20,7 +20,7 @@ public class InputDialogPage extends AbstractDialogPage
 
 	private void init()
 	{
-		final Form<Void> form = new Form<Void>("form");
+		final Form<Void> form = new Form<>("form");
 		this.add(form);
 
 		// FeedbackPanel //

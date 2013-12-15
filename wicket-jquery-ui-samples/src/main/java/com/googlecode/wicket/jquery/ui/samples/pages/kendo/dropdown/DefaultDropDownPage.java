@@ -21,7 +21,7 @@ public class DefaultDropDownPage extends AbstractDropDownPage
 
 	public DefaultDropDownPage()
 	{
-		Form<Void> form = new Form<Void>("form");
+		Form<Void> form = new Form<>("form");
 		this.add(form);
 
 		// FeedbackPanel //
@@ -29,7 +29,7 @@ public class DefaultDropDownPage extends AbstractDropDownPage
 		form.add(feedback.setOutputMarkupId(true));
 
 		// DropDownList //
-		final DropDownList<String> dropdown = new DropDownList<String>("select", new Model<String>(), new ListModel<String>(GENRES));
+		final DropDownList<String> dropdown = new DropDownList<String>("select", Model.of(""), new ListModel<String>(GENRES));
 		form.add(dropdown.setOutputMarkupId(true));
 
 		// Buttons //
